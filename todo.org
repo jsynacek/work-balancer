@@ -1,0 +1,2 @@
+* status icon should display progress + remaining time tooltip
+* persistent options (dot-folder + [ini] configuration)
