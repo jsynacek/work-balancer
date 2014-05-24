@@ -109,7 +109,7 @@ class WorkBalancerApp(Gtk.Window):
         self.window.set_visible(False)
 
     def on_status_icon_activate(self, status_icon):
-        self.window.set_visible(True)
+        self.window.set_visible(not self.window.get_visible())
 
     def on_preferences_window_delete(self, window, event):
         window.set_visible(False)
