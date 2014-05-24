@@ -642,10 +642,4 @@
       </object>
     </child>
   </object>
-  <object class="GtkStatusIcon" id="StatusIcon">
-    <property name="file">work-balancer-128.png</property>
-    <property name="has_tooltip">True</property>
-    <property name="tooltip_text" translatable="yes">my status icon tooltip</property>
-    <signal name="activate" handler="on_status_icon_activate" swapped="no"/>
-  </object>
 </interface>

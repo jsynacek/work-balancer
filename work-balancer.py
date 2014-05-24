@@ -40,7 +40,10 @@ class WorkBalancerApp(Gtk.Window):
         self.window.connect("delete-event", Gtk.main_quit)
         self.window.show()
 
-        self.statusicon = builder.get_object("StatusIcon")
+        self.statusicon = Gtk.StatusIcon()
+        self.statusicon.set_visible(True)
+        self.statusicon.set_from_file("work-balancer-128.png")
+        self.statusicon.connect("activate", self.on_status_icon_activate)
 
         self.min_spinner = builder.get_object("MinutesSpinner")
         self.sec_spinner = builder.get_object("SecondsSpinner")
@@ -79,7 +82,6 @@ class WorkBalancerApp(Gtk.Window):
                                  "on_break_minutes_spinner_value_changed" : self.on_break_spinner_change,
                                  "on_break_repeat_button_clicked" : self.on_break_repeat_button_click,
                                  "on_break_cancel_button_clicked" : self.on_break_cancel_button_click,
-                                 "on_status_icon_activate" : self.on_status_icon_activate,
                                  "on_send_to_tray_button_clicked" : self.on_send_to_tray_button_click,
                                  "on_break_message_textbox_changed" : self.on_break_message_textbox_change,
                                  "on_preferences_button_clicked" : self.on_preferences_button_click,
